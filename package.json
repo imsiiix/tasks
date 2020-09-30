@@ -1,0 +1,39 @@
+{
+  "name": "typescript-node-crud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "dev": "ts-node src/index.ts",
+    "public": "cp -r ./src/public/ ./dist/public/",
+    "hbscopy": "cp -r ./src/views/ ./dist/views/",
+    "build": "npm run clean && tsc && npm run hbscopy && npm run public",
+    "start": "node dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.8",
+    "@types/express-handlebars": "^3.1.0",
+    "@types/mongoose": "^5.7.36",
+    "@types/morgan": "^1.9.1",
+    "@typescript-eslint/eslint-plugin": "^4.1.0",
+    "@typescript-eslint/parser": "^4.1.0",
+    "eslint": "^7.9.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "handlebars": "^4.7.6",
+    "nodemon": "^2.0.4",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "mongoose": "^5.10.5",
+    "morgan": "^1.10.0",
+    "rimraf": "^3.0.2"
+  }
+}
